@@ -2,3 +2,12 @@
 <h3> Welcome to my new website...:D</h3>
 
 <h3>Press above tabs to check the functionalities..:)</h3>
+
+
+<div class="well">
+    <h4>Recent Posts</h4>
+    <% @articles.each do |a| %>
+        <strong><%= link_to a.title,a %></strong>
+        <p><%= truncate(a.body) %></p>
+    <% end %>
+</div>
