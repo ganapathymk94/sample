@@ -5,9 +5,14 @@
 
 
 <div class="well">
-    <h4>Recent Posts</h4>
+        <h4>Recent Posts</h4>
+    
     <% @articles.each do |a| %>
+    
+       Posted by: <%= a.user.username %> <br />
         <strong><%= link_to a.title,a %></strong>
         <p><%= truncate(a.body) %></p>
+        
     <% end %>
+    
 </div>
